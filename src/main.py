@@ -4,7 +4,6 @@ from student import Student
 
 def add_student(students: list, student_id: str, name: str, age: int, grade: str) -> list:
     """Thêm sinh viên mới vào danh sách."""
-
     for s in students:
         if s.student_id == student_id:
             print(f"Ma sinh vien {student_id} da ton tai!")
@@ -27,7 +26,9 @@ def main():
         Student("SV003", "Le Van C", 19, "K21"),
     ]
 
-    students = add_student(students, "SV004", "Pham Thi D", 22, "K19")
+    students = add_student(
+        students, "SV004", "Pham Thi D", 22, "K19"
+    )
 
     for student in students:
         print(f"  {student}")
